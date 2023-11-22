@@ -1,0 +1,23 @@
+version: '3'
+services:
+  tc-mvp:
+    container_name: tc-mvp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tc-mvp.rule=Host(`mvp.tuazonchateau.com`)"
+    ports:
+      - "3000:3000"
+    networks:
+       - default
+    depends_on:
+      - redis
+  redis:
+    image: redis:latest
+
+networks:
+  default:
+    external: true
+    name: proxy_default

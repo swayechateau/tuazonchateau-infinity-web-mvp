@@ -67,12 +67,6 @@ socket.on('chat message', (data) => {
     addMessage(data)
 });
 
-msgInput.addEventListener("keydown", e => {
-    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-        sendMessage(e);
-    }
-});
-
 function addMessage(data) {
     const messages = document.getElementById('messages');
     const messageItem = messageTemplate(data)

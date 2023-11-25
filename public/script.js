@@ -20,15 +20,13 @@ async function fetchData() {
 
 const inputUsername = document.getElementById('username');
 inputUsername.addEventListener("keydown", function(e) {
-    e.preventDefault()
-    if (e.key === "Enter" && document.activeElement === inputUsername) {
+    if (e.key === "Enter") {
         login(e);
     }
 })
 const msgInput = document.getElementById('message-input')
 msgInput.addEventListener("keydown", function (e) {
-    e.preventDefault()
-    if (e.key === "Enter" && document.activeElement === msgInput) {
+    if (e.key === "Enter") {
         sendMessage(e);
     }
 });

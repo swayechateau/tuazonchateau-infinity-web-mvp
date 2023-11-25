@@ -1,5 +1,7 @@
 #!/bin/bash
 
 docker compose down
+docker image rm mvp-tc-mvp
+docker image prune -y
 docker build .
 docker compose up -d

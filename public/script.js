@@ -1,6 +1,23 @@
 const socket = io();
 
+
 let username = '';
+const msgInput = document.getElementById('message-input')
+const messages = document.getElementById('messages');
+
+async function fetchData() {
+    try {
+        const response = await fetch('http://localhost:3000/api'); // Replace with your API URL
+        const data = await response.json();
+        
+        // Display the JSON response in a pre element
+        data.messages.forEach(m => addMessage(m));
+        
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
 
 function login() {
     const inputUsername = document.getElementById('username');
@@ -14,10 +31,11 @@ function login() {
     loginContainer.style.display = 'none';
     chatContainer.style.display = 'block';
     currentUser.textContent = username;
+    fetchData()
 }
 
 function sendMessage() {
-    const messageInput = document.getElementById('message-input');
+    const messageInput = msgInput
     const messages = document.getElementById('messages');
 
     const message = messageInput.value.trim();
@@ -37,8 +55,18 @@ function logout() {
 }
 
 socket.on('chat message', (data) => {
+    addMessage(data)
+});
+
+msgInput.addEventListener("keydown", e => {
+    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+        sendMessage(e);
+    }
+});
+
+function addMessage(data) {
     const messages = document.getElementById('messages');
     const messageItem = document.createElement('li');
-    messageItem.textContent = `${data.username}: ${data.message}`;
+    messageItem.textContent = `${data.username}: ${data.content}`;
     messages.appendChild(messageItem);
-});
+}

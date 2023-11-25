@@ -1,0 +1,16 @@
+{
+  "channel_id": 1,
+  "messages": [
+    {
+      "user_id": 1,
+      "username": "fred",
+      "sent": "today",
+      "content": "Hi there tony!"
+    },
+    {
+      "username": "Jane",
+      "content": "hey there",
+      "sent": 1700878764220
+    }
+  ]
+}

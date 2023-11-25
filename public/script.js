@@ -7,7 +7,7 @@ const messages = document.getElementById('messages');
 
 async function fetchData() {
     try {
-        const response = await fetch('http://localhost:3000/api'); // Replace with your API URL
+        const response = await fetch('/api'); // Replace with your API URL
         const data = await response.json();
         
         // Display the JSON response in a pre element

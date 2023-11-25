@@ -5,17 +5,13 @@ body {
     background-color: #f2f2f2;
 }
 
-.login-container, .chat-container {
+#login {
     max-width: 400px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.chat-container {
-    display: none;
 }
 
 h1, h2 {
@@ -27,11 +23,6 @@ button {
     margin-top: 10px;
 }
 
-#messages {
-    list-style-type: none;
-    padding: 0;
-}
-
 li {
     margin-bottom: 10px;
 }
@@ -41,3 +32,21 @@ li {
     justify-content: space-between;
     align-items: center;
 }
+
+html {
+    min-height: 400px;
+    min-width: 330px;
+}
+
+@media screen and (max-width: 330px){
+    html{
+        width: 330px;
+        overflow: auto;
+    }
+  }
+  @media screen and (max-height: 400px){
+    html{
+        height: 400px;
+        overflow: auto;
+    }
+  }

@@ -24,6 +24,7 @@ io.on('connection', (socket) => {
         message.content = message.message
         delete message.message
         message.sent = Date.now()
+        message.username = message.username.toLowerCase()
         saveMessage(message)
         io.emit('chat message', message);
     });

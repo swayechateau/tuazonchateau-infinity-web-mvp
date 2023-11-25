@@ -11,7 +11,7 @@ services:
     networks:
        - default
     volumes:
-      - .:.
+      - ./data.json:/usr/src/app/data.json
     depends_on:
       - redis
   redis:

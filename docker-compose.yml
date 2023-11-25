@@ -5,11 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    #labels:
-    #  - "traefik.enable=true"
-    #  - "traefik.http.routers.tc-mvp.rule=Host(`mvp.tuazonchateau.com`)"
-    ports:
-      - "3000:3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tc-mvp.rule=Host(`mvp.tuazonchateau.com`)"
     networks:
        - default
     depends_on:

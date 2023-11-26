@@ -13,10 +13,10 @@ function save(data) {
     const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
 
     // Extract the new message from the request body
-    const newMessage = data;
+    const newMessage = data.message;
 
     // Add the new message to the messages array
-    jsonData.messages.push(newMessage);
+    jsonData.channels[data.channel_id].messages.push(newMessage);
 
     // Write the updated JSON data back to the file
     fs.writeFileSync(jsonFilePath, JSON.stringify(jsonData, null, 2));

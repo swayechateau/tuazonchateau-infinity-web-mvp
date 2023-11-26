@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/argon.css">
+    <title>Infinity Chat</title>
+</head>
+
+<body>
+    <div id="login">
+        <h1 class="text-2xl">Login</h1>
+        <input type="text" id="username" placeholder="Username" class="w-full h-12 p-2">
+        <button onclick="login()" class="p-4 rounded-sm bg-sky-400 text-white w-full">Login</button>
+    </div>
+
+    <section id="chat" class="p-6 hidden">
+        <div class="chat-header">
+            <h2 class="text-4xl mb-4">Welcome, <span id="current-user"></span>!</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <ul id="users">
+
+        </ul>
+        <ul id="contacts">
+            
+        </ul>
+    </section>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

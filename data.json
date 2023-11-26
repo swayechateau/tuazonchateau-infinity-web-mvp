@@ -1,81 +1,177 @@
 {
-  "channel_id": 1,
-  "messages": [
+  "users": [
     {
       "user_id": 1,
-      "username": "fred",
-      "sent": 1700878764220,
-      "content": "Hi there tony!"
-    },
+      "username": "neko",
+      "profile_pic": ""
+    }
+  ],
+  "channels": [
     {
-      "username": "jane",
-      "content": "hey there",
-      "sent": 1700878764220
-    },
-    {
-      "username": "fred",
-      "content": "j",
-      "sent": 1700884432919
-    },
-    {
-      "username": "fred",
-      "content": "jo",
-      "sent": 1700884437818
-    },
-    {
-      "username": "sue",
-      "content": "hi",
-      "sent": 1700890604779
-    },
-    {
-      "username": "jen",
-      "content": "no",
-      "sent": 1700890630095
-    },
-    {
-      "username": "hi",
-      "content": "no",
-      "sent": 1700891324236
-    },
-    {
-      "username": "uli",
-      "content": "no",
-      "sent": 1700891328779
-    },
-    {
-      "username": "tony",
-      "content": "hello",
-      "sent": 1700891565359
-    },
-    {
-      "username": "carol",
-      "content": "hi",
-      "sent": 1700891819511
-    },
-    {
-      "username": "jim",
-      "content": "no",
-      "sent": 1700891966794
-    },
-    {
-      "username": "jim",
-      "content": "jo",
-      "sent": 1700891977178
-    },
-    {
-      "username": "test",
-      "content": "test",
-      "sent": 1700892004957
-    },
-    {
-      "username": "jim",
-      "content": "yes",
-      "sent": 1700892459496
-    },
-    {
-      "username": "jane",
-      "content": "hi",
-      "sent": 1700893198709
+      "channel_id": 1,
+      "channel_name": "The Family",
+      "channel_image": "https://source.unsplash.com/random/150x150",
+      "members": [
+        {
+          "username": "fred",
+          "role": "member"
+        },
+        {
+          "username": "jane",
+          "role": "admin"
+        },
+        {
+          "username": "sue"
+        }
+      ],
+      "messages": [
+        {
+          "user_id": 1,
+          "username": "fred",
+          "sent": 1700878764220,
+          "content": "Hi there tony!"
+        },
+        {
+          "username": "jane",
+          "content": "hey there",
+          "sent": 1700878764220
+        },
+        {
+          "username": "fred",
+          "content": "j",
+          "sent": 1700884432919
+        },
+        {
+          "username": "fred",
+          "content": "jo",
+          "sent": 1700884437818
+        },
+        {
+          "username": "sue",
+          "content": "hi",
+          "sent": 1700890604779
+        },
+        {
+          "username": "jen",
+          "content": "no",
+          "sent": 1700890630095
+        },
+        {
+          "username": "hi",
+          "content": "no",
+          "sent": 1700891324236
+        },
+        {
+          "username": "uli",
+          "content": "no",
+          "sent": 1700891328779
+        },
+        {
+          "username": "tony",
+          "content": "hello",
+          "sent": 1700891565359
+        },
+        {
+          "username": "carol",
+          "content": "hi",
+          "sent": 1700891819511
+        },
+        {
+          "username": "jim",
+          "content": "no",
+          "sent": 1700891966794
+        },
+        {
+          "username": "jim",
+          "content": "jo",
+          "sent": 1700891977178
+        },
+        {
+          "username": "test",
+          "content": "test",
+          "sent": 1700892004957
+        },
+        {
+          "username": "jim",
+          "content": "yes",
+          "sent": 1700892459496
+        },
+        {
+          "username": "jane",
+          "content": "hi",
+          "sent": 1700893198709
+        },
+        {
+          "username": "swaye",
+          "content": "hi",
+          "sent": 1700897883655
+        },
+        {
+          "username": "swaye",
+          "content": "hi",
+          "sent": 1700897931641
+        },
+        {
+          "username": "swaye",
+          "content": "hi",
+          "sent": 1700898000935
+        },
+        {
+          "username": "swaye",
+          "content": "hi",
+          "sent": 1700898081390
+        },
+        {
+          "username": "swaye",
+          "content": "hi",
+          "sent": 1700898233729
+        },
+        {
+          "username": "jim",
+          "content": "hi",
+          "sent": 1700950969448
+        },
+        {
+          "username": "jim",
+          "content": "test",
+          "sent": 1700953017878
+        },
+        {
+          "username": "jim",
+          "content": "you good?",
+          "sent": 1700953110623
+        },
+        {
+          "username": "jim",
+          "content": "hi",
+          "sent": 1700953212567
+        },
+        {
+          "username": "jim",
+          "content": "hi",
+          "sent": 1700953507102
+        },
+        {
+          "username": "jim",
+          "content": "hey",
+          "sent": 1700954137575
+        },
+        {
+          "username": "jim",
+          "content": "yh",
+          "sent": 1700954178363
+        },
+        {
+          "username": "jim",
+          "content": "okay",
+          "sent": 1700954817696
+        },
+        {
+          "username": "jim",
+          "content": "test",
+          "sent": 1700955539607
+        }
+      ]
     }
   ]
 }

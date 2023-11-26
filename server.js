@@ -13,8 +13,11 @@ app.use(express.static(__dirname+"/public"));
 
 app.use('/api', api)
 
-io.on('connection', (socket) => {
+io.on('connection', socket => {
     console.log('A user connected');
+    socket.on('username', user => {
+        console.log(user)
+    })
 
     socket.on('disconnect', () => {
         console.log('User disconnected');
@@ -25,7 +28,10 @@ io.on('connection', (socket) => {
         delete message.message
         message.sent = Date.now()
         message.username = message.username.toLowerCase()
-        saveMessage(message)
+        saveMessage({
+            channel_id: 1,
+            message:message
+        })
         io.emit('chat message', message);
     });
 });

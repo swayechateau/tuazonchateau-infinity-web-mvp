@@ -1,21 +1,13 @@
-version: '3'
+version: '3.8'
 services:
   tc-mvp:
     container_name: tc-mvp
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/swayechateau/tuazonchateau-web-mvp:main
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.tc-mvp.rule=Host(`mvp.tuazonchateau.com`)"
     networks:
        - default
-    volumes:
-      - ./data.json:/usr/src/app/data.json
-    depends_on:
-      - redis
-  redis:
-    image: redis:latest
 
 networks:
   default:

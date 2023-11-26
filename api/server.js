@@ -1,12 +1,11 @@
 const express = require('express');
 const http = require('http');
-const socketIo = require('socket.io');
 
-const api = require('./api/api');
+const api = require('./api');
 const { saveMessage } = require('./data');
 
 const app = express();
-const server = http.createServer(app);
+wails init -n myproject -t vue-ts
 const io = socketIo(server);
 
 app.use(express.static(__dirname+"/public"));

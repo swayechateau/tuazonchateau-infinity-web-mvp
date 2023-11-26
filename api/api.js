@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getChats, saveMessage} = require('./data');
+const {getChats, saveMessage} = require('../data');
 
 // Define the path to your JSON file
 const jsonFilePath = 'data.json';

@@ -2,7 +2,6 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 
-const api = require('./api/api');
 const { saveMessage } = require('./data');
 
 const app = express();
@@ -10,8 +9,6 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 app.use(express.static(__dirname+"/public"));
-
-app.use('/api', api)
 
 io.on('connection', socket => {
     console.log('A user connected');
